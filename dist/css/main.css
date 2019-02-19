@@ -62,7 +62,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url(../img/headShot.gif) no-repeat;
+      background: url(../img/LinkedIn.gif) no-repeat;
       background-size: contain;
       border-radius: 50%;
       border: solid px #00aeef; }
@@ -169,11 +169,11 @@ main {
   animation: 1.5s fadein 0.5 forwards;
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-areas: 'bioimage bio bio' 'skill skill skill' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
 
 .bio-image {
-  background: url(../img/headShot.gif) no-repeat;
+  background: url(../img/LinkedIn.gif) no-repeat;
   background-size: contain;
   grid-area: bioimage;
   margin: auto;
@@ -195,6 +195,10 @@ main {
 
 .job-3 {
   grid-area: job3; }
+
+.skill {
+  grid-area: skill;
+  text-align: center; }
 
 .job {
   background: #2f2b2b;
@@ -257,7 +261,7 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'skill' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; } }
 
 /*

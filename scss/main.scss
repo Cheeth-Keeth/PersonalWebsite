@@ -82,13 +82,14 @@ main {
     grid-gap: 30px;
     grid-template-areas:
     'bioimage bio bio'
+    'skill skill skill'
     'job1 job2 job3';
     grid-template-columns: repeat(3,1fr);
     
 }
 
 .bio-image {
-    background: url(../img/headShot.gif) no-repeat;
+    background: url(../img/LinkedIn.gif) no-repeat;
     background-size: contain;
     grid-area: bioimage;
     margin: auto;
@@ -114,6 +115,11 @@ main {
 
 .job-3 {
     grid-area: job3;
+}
+
+.skill{
+    grid-area: skill;
+    text-align: center;
 }
 
 .job {
