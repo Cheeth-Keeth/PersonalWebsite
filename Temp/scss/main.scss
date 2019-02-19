@@ -1,0 +1,164 @@
+@import 'config';
+@import 'menu';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include background();
+    background: $primary-color;
+    color: #fff;
+    height: 100%;
+    margin: 0;
+    font-family: 'Sergoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+// Headings
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 6rem;
+    }
+
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten($primary-color, 2), 0.5);
+    }
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+main {
+    padding: 4rem;
+    height: 100%;
+
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.4rem;
+
+            &:hover {
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
+
+        .resume {
+            font-size: 18px;
+        }
+    }
+    &#home {
+        overflow: hiden;
+        h1 {
+            margin-top: 20vh;
+        }
+    }
+}
+
+.about-info {
+    animation: 1.5s fadein 0.5 forwards;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+    'bioimage bio bio'
+    'skill skill skill'
+    'job1 job2 job3';
+    grid-template-columns: repeat(3,1fr);
+    
+}
+
+.bio-image {
+    background: url(../img/linkedIn.gif) no-repeat;
+    background-size: contain;
+    grid-area: bioimage;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: $secondary-color 8px solid;
+    animation: 1.5s fadein 0.5 forwards;
+}
+
+.bio {
+    grid-area: bio;
+    font-size: 1.2rem;
+}
+
+.job-1 {
+    grid-area: job1;
+}
+
+.job-2 {
+    grid-area: job2;
+}
+
+.job-3 {
+    grid-area: job3;
+}
+
+.skill{
+    grid-area: skill;
+    text-align: center;
+}
+
+.job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.contact {
+    padding: 20px;
+    margin: 10px;
+    background: lighten($primary-color, 5);
+    border: white 3px solid;
+    border-bottom: $secondary-color 3px solid;
+    opacity: 0;
+    animation: 1.5s fadein 0.5 forwards;
+
+}
+
+
+@keyframes fadein {
+    100%{
+        opacity: 1;
+    }
+}
+
+.game {
+    background: lighten($primary-color, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@import 'mobile';
